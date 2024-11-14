@@ -51,7 +51,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20")
 
-    implementation("androidx.exifinterface:exifinterface:1.3.5")
+    implementation("androidx.exifinterface:exifinterface:1.3.7")
     testImplementation("junit:junit:4.13.2")
     implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("androidx.fragment:fragment-ktx:1.5.4")
