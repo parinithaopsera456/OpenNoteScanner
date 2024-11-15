@@ -1,9 +1,13 @@
+plugins {
+    id("com.android.application") version "7.3.1" apply false
+    id("org.jetbrains.kotlin.android") version "1.7.20" apply false
+}
+
 buildscript {
     repositories {
         google()
-        mavenCentral() // Maven Central is important for a lot of popular libraries
-        maven(url = "https://jitpack.io") // JitPack for libraries hosted on GitHub
-        maven { url = uri("https://jcenter.bintray.com/") } // Deprecated, but sometimes required
+        mavenCentral()
+        maven(url = "https://jitpack.io") // For GitHub-hosted libraries
     }
     dependencies {
         classpath("com.android.tools.build:gradle:7.3.1")
@@ -15,16 +19,14 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://jitpack.io") // Make sure JitPack is included here
-        maven { url = uri("https://jcenter.bintray.com/") } // Include JCenter, even though it's deprecated
+        maven(url = "https://jitpack.io")
     }
 }
 
 dependencies {
-    // Try adding the missing dependency directly (if it's available in JitPack or Maven Central)
-    implementation("us.feras.mdv:markdownview:1.1.0")
+    implementation("us.feras.mdv:markdownview:1.1.0") // Replace with an alternative if unavailable
 }
 
-tasks.register("clean", Delete::class) {
+tasks.register<Delete>("clean") {
     delete(rootProject.buildDir)
 }
