@@ -24,7 +24,8 @@ allprojects {
 }
 
 dependencies {
-    implementation("us.feras.mdv:markdownview:1.1.0") // Replace with an alternative if unavailable
+    // Replace MarkdownView with Markwon for Markdown rendering
+    implementation("io.noties.markwon:core:4.6.2") // Core Markwon library for Markdown rendering
 }
 
 tasks.register<Delete>("clean") {
